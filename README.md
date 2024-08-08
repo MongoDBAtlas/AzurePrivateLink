@@ -15,10 +15,12 @@ Private Endpoint를 선택 하고 Add Private Endpoint를 클릭합니다.
 
 <img src="/images/image01.png" width="80%" height="80%">
 
-Azure를 선택 합니다.
+Azure를 선택 합니다.   
+
 <img src="/images/image02.png" width="50%" height="50%">
 
-Azure의 Vnet의 리전을 선택 합니다 (서울).   
+Azure의 Vnet의 리전을 선택 합니다 (서울).    
+
 <img src="/images/image03.png" width="50%" height="50%">
 
 이후 Atlas의 endpoint 가 생성 되며 (3-4분 소요) Azure의 VNet 정보를 입력 하여 줍니다.
@@ -27,16 +29,16 @@ Azure의 Vnet의 리전을 선택 합니다 (서울).
 
 Azure Vnet의 정보를 입력 하여 줍니다.
 
-Resource Group Name
+Resource Group Name    
 <img src="/images/image05.png" width="70%" height="70%">
 
-Virtual Network Name
+Virtual Network Name    
 <img src="/images/image06.png" width="70%" height="70%">
 
-Subnet Name
+Subnet Name    
 <img src="/images/image07.png" width="70%" height="70%">
 
-private endpoint name 을 입력 하여 줍니다.
+private endpoint name 을 입력 하여 줍니다.    
 
 <img src="/images/image08.png" width="70%" height="70%">
 
@@ -44,7 +46,8 @@ Private endpoint 생성을 위한 Azure CLI 명령을 복사하여 줍니다.
 
 ### Azure CLI
 
-복사한 CLI를 실행 하여 줍니다. 
+복사한 CLI를 실행 하여 줍니다.    
+
 <img src="/images/image09.png" width="60%" height="60%">
 
 `````
@@ -94,10 +97,12 @@ PS /home/kim>
 생성한 PrivateLink는 Vnet의 Private endpoint에서 확인 할 수 있습니다. 생성된 PrivateLink에서 Private endpoint Resource ID와 Private Endpoint IP Address를 확인하고 Atlas에 입력 하여야 합니다.
 아래 페이지에 해당 값을 저장 하고 이를 Atlas에 입력 해주어 설정을 완료 합니다. 
 
-Private endpoint Resource ID
+Private endpoint Resource ID   
+
 <img src="/images/image10.png" width="80%" height="80%">
 
-Private Endpoint IP Address
+Private Endpoint IP Address   
+
 <img src="/images/image11.png" width="80%" height="80%">
 
 
@@ -105,24 +110,24 @@ Private Endpoint IP Address
 
 Atlas Console 에서 Private Link 설정에서 Next를 클릭 하여 주고 Private endpoint Resource ID와 Private Endpoint IP Address를 입력 하여 줍니다. 
 
-<img src="/images/image12.png" width="80%" height="80%">
+<img src="/images/image12.png" width="80%" height="80%">    
 
 최종 생성 버튼을 클릭 하면 후속 작업이 진행 됩니다. 
 
 완료 되면 상태 정보가 Available로 보여 집니다.
 
-<img src="/images/image13.png" width="80%" height="80%">
+<img src="/images/image13.png" width="80%" height="80%">    
 
 
 ### Atlas Connection
 
 Atlas Cluster의 접속 주소를 얻기 위해 Cluster의 Connection을 선택 합니다. 
 
-<img src="/images/image14.png" width="80%" height="80%">
+<img src="/images/image14.png" width="80%" height="80%">    
 
 Connection type에서 Private Endpoint를 선택 합니다.
 
-<img src="/images/image15.png" width="80%" height="80%">
+<img src="/images/image15.png" width="80%" height="80%">    
 
 Connection String에 나온 주소를 복사 하고 VNet 내부에서 접속을 수행 합니다.
 (Private endpoint의 주소와 일반 접근 주소가 다른 것을 볼 수 있습니다.)
